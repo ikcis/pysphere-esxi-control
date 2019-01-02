@@ -1,0 +1,23 @@
+show list-host and list-guest
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A list-host -A list-guest
+
+turn on/off/reboot guest
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A on -g test-01
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A off -g test-01
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A reboot -g test-01
+
+create guest
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A create --disk 10 --store "[datastore1]" --cpu 1 --mem 2048 --net LAN -g test-02
+
+get_snapshot_info
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A get_snapshot_info -g test-01
+
+create_snapshot
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A create_snapshot -g test-01
+
+delete_snapshot
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A delete_snapshot -g test-01
+
+revert_to_snapshot
+python ./pySimpleVmCtrl.py -H 192.168.221.128 -U root -P yekaikai,./123 -A revert_to_snapshot -g test-01
+
