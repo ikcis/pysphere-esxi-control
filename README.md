@@ -1,5 +1,6 @@
 # pysphere-esxi-control
-## 设计
+
+## Design
 
 ESXiGuest.py实现ESXiGuestClass用户类，针对用户对虚拟机的操作，如有快闪，开机，关机，重启等方法
 
@@ -7,18 +8,16 @@ ESXiHost.py实现ESXiHostClass服务端类，有登陆连接服务器，配置�
 
 pySimpleVmCtrl.py实现命令行格式，命令行会调用用户类和服务端类的方法，用于终端命令行输入来访问，操作服务器。
 
-## requirements
+## Requirements
 
 Python2.7 and PySphere
 
-## --help
+## Usages
 ```$ python ./pySimpleVmCtrl.py --help
 usage: pySimpleVmCtrl.py [-h] [-v] [-H HOST] [-U USER] [-P PASSWD] [-A ACTION]
                          [-g GUEST] [--store DATASTORE] [--net NETWORK]
                          [--disk DISKSIZE] [--cpu CPU] [--mem MEMORY]
                          [--os OPERATINGSYSTEM]
-
-  Simple script to create/delete/list VMware ESXi guests
 
 examples:
 # list available datastores and networks and guests on ESXi host 192.168.1.2
