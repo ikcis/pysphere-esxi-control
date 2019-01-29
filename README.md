@@ -1,5 +1,7 @@
 # pysphere-esxi-control
+
 利用PySphere来操作ESXi虚拟机，实现复制、克隆、开机等一系列管理的自动化
+
 ESXiGuest.py实现ESXiGuestClass用户类，针对用户对虚拟机的操作，如有快闪，开机，关机，重启等方法
 
 ESXiHost.py实现ESXiHostClass服务端类，有登陆连接服务器，配置信息查看等方法
